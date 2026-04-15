@@ -1,0 +1,66 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --card-color: #f4f4f4;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --card-color: #2c2c2c;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.4s ease;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.toggle {
+  margin-top: 20px;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle-label {
+  width: 70px;
+  height: 35px;
+  background: #ccc;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.ball {
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+  transition: transform 0.3s ease;
+}
+
+input:checked + .toggle-label .ball {
+  transform: translateX(35px);
+}
+
+.icon {
+  font-size: 14px;
+}
+
+body.dark .toggle-label {
+  background: #444;
+}
